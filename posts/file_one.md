@@ -1,5 +1,11 @@
 First post!
 4th December 2013
 This is the summary.
-# Markdown!
+## Markdown!
 Wow!
+
+`def function(){}`
+
+Some more text
+
+## Another heading
