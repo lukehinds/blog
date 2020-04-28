@@ -8,4 +8,3 @@ Wow!
 
 Some more text
 
-## Another heading

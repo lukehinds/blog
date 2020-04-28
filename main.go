@@ -67,6 +67,7 @@ func getPosts() []Post {
 func main() {
 	fs := http.FileServer(http.Dir("./static"))
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
+	http.Handle("/assets/", http.StripPrefix("/assets/", http.FileServer(http.Dir("assets"))))
 	http.HandleFunc("/", handlerequest)
 	http.ListenAndServe(":8080", nil)
 }
