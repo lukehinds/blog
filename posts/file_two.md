@@ -1,7 +1,18 @@
-Second post
-5th December 2013
-This is the summary.
-This is the main post!
-# Markdown!
-![alt text](assets/spine-kit.png)
-*it's* **lovely**!
+---
+title: Second post!
+date: 4th Jan 2020
+summary: This is the summary.
+---
+## Markdown!
+
+Some code:
+
+```
+type Post struct {
+	Title   string
+	Date    string
+	Summary string
+	Body    string
+	File    string
+}
+```

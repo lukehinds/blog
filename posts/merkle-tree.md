@@ -1,5 +1,9 @@
-Creating a Merkle Tree in the shell
-26th April 2020
+---
+title: Creating a Merkle Tree in the shell
+date: 26th April 2020
+summary: Walkthrough of building a merkle tree by hand.
+---
+
 I have known about and used Merkle Trees for a while, but never really bothered to construct one manually (no real need as so many good libraries are out there). Well it’s Saturday night, we are in a lock down, so why not?
 
 For anyone new to Merkle tree’s, they are a binary tree of hashed values concatenated together (one-way hash functions) until an eventual root hash is achieved. The root hash can then be used a a master key of the entire tree. The root hash provides a point of non repudiation of the entirety of the tree. Merkle trees are currently utilised in three well known applications

@@ -1,8 +1,9 @@
-First post!
-4th December 2013
-This is the summary.
+---
+title: First post!
+date: 3rd Jan 2020
+summary: This is the summary.
+---
 ## Markdown!
-Wow!
 
 `def function(){}`
 
