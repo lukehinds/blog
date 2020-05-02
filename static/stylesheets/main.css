@@ -1,8 +1,25 @@
 body {
     background-color: white;
   }
-  
-  h1,h2,h3,h4,h5,h6 {
-    font-family: 'Open Sans', sans-serif;
-    margin-left: 20px;
-  }
+box {
+  background: #264653;
+  border-radius: 6px;
+  color: #fff;
+  display: block;
+  font: 14px/24px "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
+  padding: 24px 15px;
+  text-align: center;
+}
+header,
+footer {
+  margin: 0 1.5% 24px 1.5%;
+}
+footer {
+  margin-bottom: 0;
+}
+.header-link
+{
+   color:black;
+   text-decoration: none; 
+   background-color: none;
+}

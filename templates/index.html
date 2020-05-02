@@ -3,20 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link rel="stylesheet" href="/static/stylesheets/main.css">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">  -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">  -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/stylesheets/main.css">
   <title>Luke Hinds</title>
 </head>
 <body>
-  <p><h1>Lukes Hinds</h1></p>
+  <!-- <p><h1>Lukes Hinds</h1></p> -->
+  <a href="/">
+    <div class="header-link">
+         <h1>Luke Hinds</h1>
+    </div>
+  </a>
   <!-- <h3>Thoughts on running and systems security / code</h3> -->
   <div class=".container-sm">
     <ul>
       {{range .}}
-      <a href="/{{.File}}"><h2>{{.Title}}</h2></a>
-      <p><h5>{{.Date}}</h5></p>
-      <p><h5>{{.Summary}}</h5></p>
+      <a href="/{{.File}}"><h3>{{.Title}}</h3></a>
+      <p>{{.Date}}</p>
+      <p>{{.Summary}}</p>
     {{end}}
     </ul>
   </div>
