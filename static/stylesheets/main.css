@@ -1,14 +1,15 @@
 body {
+    font: 14px/24px "Open Sans", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
     background-color: white;
   }
-box {
-  background: #264653;
+code {
+  background: #000;
   border-radius: 6px;
   color: #fff;
-  display: block;
+  display: inline-block;
   font: 14px/24px "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
-  padding: 24px 15px;
-  text-align: center;
+  padding: 15px 15px;
+  text-align: left;
 }
 header,
 footer {
@@ -22,4 +23,8 @@ footer {
    color:black;
    text-decoration: none; 
    background-color: none;
+}
+img[src*='#center'] { 
+  display: block;
+  margin: auto;
 }

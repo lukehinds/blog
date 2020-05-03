@@ -35,6 +35,9 @@ func handlerequest(w http.ResponseWriter, r *http.Request) {
 		m := front.NewMatter()
 		m.Handle("---", front.YAMLHandler)
 		f, body, err := m.Parse(strings.NewReader(string(fileread)))
+		if err != nil {
+			fmt.Println("error", err)
+		}
 		title := fmt.Sprintf("%v", f["title"])
 		date := fmt.Sprintf("%v", f["date"])
 		summary := fmt.Sprintf("%v", f["summary"])

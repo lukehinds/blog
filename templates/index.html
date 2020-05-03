@@ -3,8 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">  -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/static/stylesheets/main.css">
   <title>Luke Hinds</title>
 </head>
@@ -15,11 +14,13 @@
          <h1>Luke Hinds</h1>
     </div>
   </a>
+  <p>Thoughts on running and systems security / code</p>
+  <hr>
   <!-- <h3>Thoughts on running and systems security / code</h3> -->
   <div class=".container-sm">
     <ul>
       {{range .}}
-      <a href="/{{.File}}"><h3>{{.Title}}</h3></a>
+      <a href="/{{.File}}"><h4>{{.Title}}</h4></a>
       <p>{{.Date}}</p>
       <p>{{.Summary}}</p>
     {{end}}

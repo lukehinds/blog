@@ -60,9 +60,38 @@ HABCDEFGH: fe65b452f05c006bee04415be7a53030dbcb16040bfd1eb19b3b02f95b4d44d7
 
 ## Verify a single Data Segment
 
-Let’s say we now want to verify data segment `HD`. instead of requiring every data segment, we only need the leafs of `HEFGH`, `HAB` and `HC` and the root `HABCDEFGH`.
+Let’s say we now want to verify data segment "HD". instead of requiring every data segment, we only need the leafs of "HEFGH", "HAB" and "HC" and the root "HABCDEFGH".
 
 
-![](assets/merkle-tree-tx.jpg)
+![](assets/merkle-tree-tx.jpg#center)
 
-Lets start by grabbing HD the segment we wish to verify
+Lets start by grabbing "HD" the segment we wish to verify
+
+```
+HD=$(echo -n HD | openssl sha256 | awk '{print $2}') ; echo $HD
+323e41792751e840ad9e398d5057120cb1f1b730acbb193ee6498eb3b481059c
+```
+
+We can now concat and hash "HC" | "HD" to get "HCD"
+
+```
+HCD=$echo -n ${HC}${HD} | openssl sha256 | awk '{print $2}')
+0f0143cd71707a8db9e6c53b0c7b3fefbf6e16a3a0048d83e81979f753380c42
+```
+
+Concat and hash "HAD" to "HAB" to get "HABCD"
+
+```
+HABCD=$(echo -n ${HAB}${HCD} | openssl sha256 | awk '{print $2}'); echo $HABCD
+843518e9d62f8b81c794d0ac47e82e2f3f335892b33014262958c9215ff8703b
+```
+
+Concat and hash "HABCD" to "HEFGH"
+
+```
+HABCDEFGH=$(echo -n ${HABCD}${HEFGH} | openssl sha256 | awk '{print $2}'); echo $HABCDEFGH
+fe65b452f05c006bee04415be7a53030dbcb16040bfd1eb19b3b02f95b4d44d7
+```
+
+And there we have our root and have verified HD. We were able to verify a data segment from hashing the object we want verified, by having only three hashes from the tree and the root hash ("HEFGH", "HAB", "HC", "HABCDEFGH")
+
