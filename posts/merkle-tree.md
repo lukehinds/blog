@@ -55,7 +55,7 @@ The result of this script will be the merkle root (HABCDEFGH) and we also spit o
 HC: 616e8cc2cc762815bce92ba8e817da87e92c98b3e3e5c42697caaa76e18c6129
 HAB: 545f638df3d2ba4d2295cd1cf6506c05b8340afd5a014f704c741245aab86831
 HEFGH: 6d109b1eb6c0ae1353ce98977f15091d2e5d28664f24f362e697da8fc13a6617
-HABCDEFGH: fe65b452f05c006bee04415be7a53030dbcb16040bfd1eb19b3b02f95b4d44d7 
+HABCDEFGH: fe65b452f05c006bee04415be7a53030dbcb16040bfd1eb19b3b02f95b4d44d7
 ```
 
 ## Verify a single Data Segment
@@ -63,7 +63,7 @@ HABCDEFGH: fe65b452f05c006bee04415be7a53030dbcb16040bfd1eb19b3b02f95b4d44d7
 Let’s say we now want to verify data segment "HD". instead of requiring every data segment, we only need the leafs of "HEFGH", "HAB" and "HC" and the root "HABCDEFGH".
 
 
-![](assets/merkle-tree-tx.jpg#center)
+![](assets/merkle-tree-tx.jpg)
 
 Lets start by grabbing "HD" the segment we wish to verify
 
